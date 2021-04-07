@@ -4,9 +4,9 @@ import EventList from "../components/EventList/EventList";
 const FeatureEvents = (props) => {
     const featuredEvents = getFeaturedEvents();
     return (
-        <main>
+        <section>
             <EventList items={featuredEvents} />
-        </main>
+        </section>
     );
 };
 
