@@ -35,7 +35,7 @@ export const getFeaturedEvents = () => DUMMY_EVENTS.filter((event) => event.isFe
 
 export const getAllEvents = () => DUMMY_EVENTS;
 
-export function getFilteredEvents(dateFilter) {
+export const getFilteredEvents = (dateFilter) => {
     const { year, month } = dateFilter;
 
     let filteredEvents = DUMMY_EVENTS.filter((event) => {
@@ -44,6 +44,6 @@ export function getFilteredEvents(dateFilter) {
     });
 
     return filteredEvents;
-}
+};
 
 export const getEventById = (id) => DUMMY_EVENTS.find((event) => event.id === id);
