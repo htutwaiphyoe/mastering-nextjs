@@ -3,6 +3,9 @@ import path from "path";
 
 const ProductDetail = (props) => {
     const { product } = props;
+    // if (!product) {
+    //     return <p>Loading...</p>;
+    // }
     return (
         <main>
             <h1>{product.title}</h1>
@@ -11,11 +14,14 @@ const ProductDetail = (props) => {
     );
 };
 
-export async function getStaticProps(context) {
-    console.log(context);
-    const { params } = context;
+async function getData() {
     const jsonData = await fs.readFile(path.join(process.cwd(), "dev_data", "data.json"), "utf8");
     const data = JSON.parse(jsonData);
+    return data;
+}
+export async function getStaticProps(context) {
+    const { params } = context;
+    const data = await getData();
     const product = data.products.find((p) => p.id === params.pid);
     return {
         props: {
@@ -25,8 +31,10 @@ export async function getStaticProps(context) {
 }
 
 export async function getStaticPaths() {
+    const data = await getData();
+    const params = data.products.map((p) => ({ params: { pid: p.id } }));
     return {
-        paths: [{ params: { pid: "p1" } }, { params: { pid: "p2" } }, { params: { pid: "p3" } }],
+        paths: params,
         fallback: false,
     };
 }
