@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import EventList from "../../components/EventList/EventList";
 import ErrorAlert from "../../components/ErrorAlert/ErrorAlert";
 import { getFilteredEvents } from "../../helpers/api";
@@ -14,6 +16,14 @@ const FilteredEvents = (props) => {
     }
     return (
         <section>
+            <Head>
+                <title>FilteredEvents | NextEvents</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta
+                    name="description"
+                    content="Grap your opportunities for brighter future with our special events. We hold both soft and hard skills development trainings."
+                />
+            </Head>
             <EventList items={items} />
         </section>
     );

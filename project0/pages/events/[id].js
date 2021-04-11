@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Head from "next/head";
 
 import { getFeaturedEvents, getEventById } from "../../helpers/api";
 import EventContent from "../../components/EventDetail/EventContent";
@@ -13,6 +14,11 @@ const EventDetail = (props) => {
     }
     return (
         <Fragment>
+            <Head>
+                <title>{event.title} | NextEvents</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="description" content={event.description} />
+            </Head>
             <EventSummary title={event.title} />
             <EventLogistics
                 address={event.location}
