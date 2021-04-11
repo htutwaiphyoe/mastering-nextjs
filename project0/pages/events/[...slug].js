@@ -1,20 +1,10 @@
-import { useRouter } from "next/router";
-
-import { getFilteredEvents } from "../../dev-data/dummy-data";
 import EventList from "../../components/EventList/EventList";
 import ErrorAlert from "../../components/ErrorAlert/ErrorAlert";
-const FilteredEvents = (props) => {
-    const router = useRouter();
-    const filteredData = router.query.slug;
-    if (!filteredData) {
-        return (
-            <ErrorAlert>
-                <p className="center">Loading...</p>
-            </ErrorAlert>
-        );
-    }
+import { getFilteredEvents } from "../../helpers/api";
 
-    const items = getFilteredEvents({ year: +filteredData[0], month: +filteredData[1] });
+const FilteredEvents = (props) => {
+    const { filteredEvents: items } = props;
+
     if (items.length === 0) {
         return (
             <ErrorAlert>
@@ -29,4 +19,15 @@ const FilteredEvents = (props) => {
     );
 };
 
+export async function getServerSideProps(context) {
+    const { params } = context;
+    const year = +params.slug[0];
+    const month = +params.slug[1];
+    const data = await getFilteredEvents(year, month);
+    return {
+        props: {
+            filteredEvents: data,
+        },
+    };
+}
 export default FilteredEvents;
