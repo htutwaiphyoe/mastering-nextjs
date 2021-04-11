@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import AddressIcon from "../../shared/icons/AddressIcon";
 import ArrowRightIcon from "../../shared/icons/ArrowRightIcon";
 import DateIcon from "../../shared/icons/DateIcon";
@@ -15,7 +17,7 @@ const EventItem = ({ title, id, image, location, date }) => {
     const link = `/events/${id}`;
     return (
         <li className={classes.item}>
-            <img src={`/${image}`} alt={title} />
+            <Image src={`/${image}`} alt={title} width={300} height={200} />
             <div className={classes.content}>
                 <div className={classes.summary}>
                     <h2>{title}</h2>
