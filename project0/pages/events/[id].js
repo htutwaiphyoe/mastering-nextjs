@@ -10,13 +10,23 @@ const EventDetail = (props) => {
     const { event } = props;
 
     if (!event) {
-        return <p className="center">Loading...</p>;
+        return (
+            <Fragment>
+                <Head>
+                    <title>FilteredEvents | NextEvents</title>
+                    <meta
+                        name="description"
+                        content="Grap your opportunities for brighter future with our special events. We hold both soft and hard skills development trainings."
+                    />
+                </Head>
+                <p className="center">Loading...</p>
+            </Fragment>
+        );
     }
     return (
         <Fragment>
             <Head>
                 <title>{event.title} | NextEvents</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta name="description" content={event.description} />
             </Head>
             <EventSummary title={event.title} />

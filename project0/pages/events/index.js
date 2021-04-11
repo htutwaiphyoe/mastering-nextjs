@@ -14,7 +14,6 @@ const AllEvents = (props) => {
         <section>
             <Head>
                 <title>All Events | NextEvents</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta
                     name="description"
                     content="Grap your opportunities for brighter future with our special events. We hold both soft and hard skills development trainings."

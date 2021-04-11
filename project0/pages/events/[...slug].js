@@ -10,6 +10,13 @@ const FilteredEvents = (props) => {
     if (items.length === 0) {
         return (
             <ErrorAlert>
+                <Head>
+                    <title>FilteredEvents | NextEvents</title>
+                    <meta
+                        name="description"
+                        content="Grap your opportunities for brighter future with our special events. We hold both soft and hard skills development trainings."
+                    />
+                </Head>
                 <p className="center">No events available in that time</p>
             </ErrorAlert>
         );
@@ -18,7 +25,6 @@ const FilteredEvents = (props) => {
         <section>
             <Head>
                 <title>FilteredEvents | NextEvents</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta
                     name="description"
                     content="Grap your opportunities for brighter future with our special events. We hold both soft and hard skills development trainings."
