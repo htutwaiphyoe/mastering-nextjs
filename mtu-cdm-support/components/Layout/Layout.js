@@ -15,26 +15,26 @@ const Layout = (props) => {
                 <link rel="manifest" href="/manifest.json" />
                 <meta
                     name="description"
-                    content="MTU Students' Union formed a CDM Support Team to help CDM servents in Mandalay Technological University. CDM Support Team is collecting money from students and other donars and providing monthly for their salary."
+                    content="MTU Students' Union formed a CDM Support Team to help CDM servents in Mandalay Technological University. CDM Support Team is collecting money and providing monthly"
                 />
 
                 <meta
                     property="og:description"
-                    content="MTU Students' Union formed a CDM Support Team to help CDM servents in Mandalay Technological University. CDM Support Team is collecting money from donors and providing monthly."
+                    content="MTU Students' Union formed a CDM Support Team to help CDM servents in Mandalay Technological University. CDM Support Team is collecting money and providing monthly."
                 />
 
-                <meta property="og:site_name" content="MTU CDM Support" />
-                <meta name="og:title" property="og:title" content="MTU CDM Support" />
+                <meta property="og:site_name" content="MTU CDM Support Team" />
+                <meta name="og:title" property="og:title" content="MTU CDM Support Team" />
                 <meta property="og:type" content="website" />
                 <meta name="robots" content="index, follow" />
                 <link rel="canonical" href="https://mtucdmsupport.vercel.app/" />
                 <meta property="og:url" content="https://mtucdmsupport.vercel.app/" />
 
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="MTU CDM Support" />
+                <meta name="twitter:title" content="MTU CDM Support Team" />
                 <meta
                     name="twitter:description"
-                    content="MTU Students' Union formed a CDM Support Team to help CDM servents in Mandalay Technological University. CDM Support Team is collecting money from donors and providing monthly."
+                    content="MTU Students' Union formed a CDM Support Team to help CDM servents in Mandalay Technological University. CDM Support Team is collecting money and providing monthly."
                 />
                 <meta name="twitter:image" content="/logo192.png" />
                 <meta name="og:image" content="/logo192.png" />
@@ -53,7 +53,7 @@ const Layout = (props) => {
                     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
                     rel="stylesheet"
                 />
-                <title>MTU CDM Support</title>
+                <title>MTU CDM Support Team</title>
             </Head>
             <Navigation />
             <main>{props.children}</main>
