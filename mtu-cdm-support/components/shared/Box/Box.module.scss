@@ -1,0 +1,11 @@
+@import "../../../sass/abstracts/mixins";
+.Box {
+    @include center;
+    width: 100%;
+    max-width: 70rem;
+    margin: 1rem auto;
+
+    &_Vertical {
+        flex-direction: column;
+    }
+}

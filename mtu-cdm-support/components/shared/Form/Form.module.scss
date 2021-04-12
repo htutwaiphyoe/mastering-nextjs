@@ -1,0 +1,11 @@
+@import "../../../sass/abstracts/mixins";
+@import "../../../sass/abstracts/variables";
+
+.Form {
+    @include center;
+    flex-direction: column;
+    background-color: $color-white;
+    @include responsive(767, 0) {
+        padding-bottom: 12rem;
+    }
+}

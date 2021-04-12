@@ -1,0 +1,19 @@
+@import "../../../../sass/abstracts/mixins";
+@import "../../../../sass/abstracts/variables";
+.Input {
+    width: 85%;
+    max-width: 50rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 1.6rem;
+    font-family: "Lato", "Helvetica Neue";
+
+    &:focus {
+        border: 1px solid $color-primary;
+    }
+    &__Invalid {
+        border: 1px solid $color-primary;
+    }
+}

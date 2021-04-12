@@ -1,0 +1,46 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.Contact {
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    // @include fadeIn;
+    @include responsive(767, 0) {
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    &__Container {
+        @include center;
+        flex-direction: column;
+        padding: 3rem 0;
+    }
+
+    &__ImageContainer {
+        width: 30rem;
+
+        &__Image {
+            width: 100%;
+        }
+    }
+    &__List {
+        list-style: none;
+        @include center;
+        line-height: 1.2;
+        &__Item {
+            padding: 0 1rem;
+            font-size: 4rem;
+
+            &_1 {
+                color: #1778f2;
+            }
+
+            &_2 {
+                color: #0078ff;
+            }
+        }
+    }
+}

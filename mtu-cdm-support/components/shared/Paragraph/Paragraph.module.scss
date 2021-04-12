@@ -1,0 +1,9 @@
+@import "../../../sass/abstracts/variables";
+.Paragraph {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: $color-muted;
+    padding: 0 1rem;
+    margin: 1rem;
+    text-align: center;
+}
