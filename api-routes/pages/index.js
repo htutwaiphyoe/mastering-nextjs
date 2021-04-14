@@ -4,15 +4,18 @@ const Home = () => {
     const emailRef = useRef("");
     const feedbackRef = useRef("");
 
-    const onSubmitHandler = (e) => {
+    const onSubmitHandler = async (e) => {
         e.preventDefault();
         const email = emailRef.current.value;
         const feedback = feedbackRef.current.value;
-        fetch({
-            url: "http://localhost:3000/api/feedback",
-            method: "POST",
-            body: JSON.stringify({ email, feedback }),
-        });
+        const data = await (
+            await fetch("/api/feedback", {
+                method: "POST",
+                body: JSON.stringify({ email, feedback }),
+                headers: { "Content-Type": "application/json" },
+            })
+        ).json();
+        console.log(data);
     };
     return (
         <main>
