@@ -10,6 +10,8 @@ export const getFileData = async () => {
 };
 
 const handler = async (req, res) => {
+    const filePath = getPath();
+    const fileData = await getFileData();
     if (req.method === "POST") {
         const { email, feedback } = req.body;
         const data = {
@@ -17,8 +19,7 @@ const handler = async (req, res) => {
             email,
             feedback,
         };
-        const filePath = getPath();
-        const fileData = await getFileData();
+
         fileData.push(data);
         await fs.writeFile(filePath, JSON.stringify(fileData));
         return res.status(201).json({

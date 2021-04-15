@@ -1,4 +1,4 @@
-import { getFileData } from "../api/feedback";
+import { getFileData } from "../api/feedback/";
 
 const Feedback = (props) => {
     return (
