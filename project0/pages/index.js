@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import EventList from "../components/EventList/EventList";
+import NewsletterRegistration from "../components/input/NewsletterRegistration";
 import { getFeaturedEvents } from "../helpers/api";
 
 const FeatureEvents = (props) => {
@@ -13,6 +14,7 @@ const FeatureEvents = (props) => {
                     content="Grap your opportunities for brighter future with our special events. We hold both soft and hard skills development trainings."
                 />
             </Head>
+            <NewsletterRegistration />
             <EventList items={props.featuredEvents} />
         </section>
     );

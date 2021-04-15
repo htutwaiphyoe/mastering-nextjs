@@ -5,6 +5,7 @@ import { getFeaturedEvents, getEventById } from "../../helpers/api";
 import EventContent from "../../components/EventDetail/EventContent";
 import EventSummary from "../../components/EventDetail/EventSummary";
 import EventLogistics from "../../components/EventDetail/EventLogistics";
+import Comments from "../../components/input/Comments";
 
 const EventDetail = (props) => {
     const { event } = props;
@@ -39,6 +40,7 @@ const EventDetail = (props) => {
             <EventContent>
                 <p>{event.description}</p>
             </EventContent>
+            <Comments eventId={event.id} />
         </Fragment>
     );
 };
