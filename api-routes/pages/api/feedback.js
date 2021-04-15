@@ -1,11 +1,15 @@
 import fs from "fs/promises";
 import path from "path";
 
-const handler = async (req, res) => {
-    const filePath = path.join(process.cwd(), "data", "feedbacks.json");
+export const getPath = () => path.join(process.cwd(), "data", "feedbacks.json");
+
+export const getFileData = async () => {
+    const filePath = getPath();
     let fileData = await fs.readFile(filePath);
-    fileData = JSON.parse(fileData);
-    
+    return JSON.parse(fileData);
+};
+
+const handler = async (req, res) => {
     if (req.method === "POST") {
         const { email, feedback } = req.body;
         const data = {
@@ -13,7 +17,8 @@ const handler = async (req, res) => {
             email,
             feedback,
         };
-
+        const filePath = getPath();
+        const fileData = await getFileData();
         fileData.push(data);
         await fs.writeFile(filePath, JSON.stringify(fileData));
         return res.status(201).json({
