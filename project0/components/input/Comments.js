@@ -9,12 +9,23 @@ function Comments(props) {
 
     const [showComments, setShowComments] = useState(false);
 
-    function toggleCommentsHandler() {
+    async function toggleCommentsHandler() {
         setShowComments((prevStatus) => !prevStatus);
+        if (!showComments) {
+            const response = await (await fetch("/api/comments/" + eventId)).json();
+            console.log(response);
+        }
     }
 
-    function addCommentHandler(commentData) {
-        // send data to API
+    async function addCommentHandler(commentData) {
+        const respone = await (
+            await fetch("/api/comments/" + eventId, {
+                method: "POST",
+                body: JSON.stringify(commentData),
+                headers: { "Content-Type": "application/json" },
+            })
+        ).json();
+        console.log(respone);
     }
 
     return (
