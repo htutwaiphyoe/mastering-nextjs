@@ -1,6 +1,12 @@
+import { MongoClient } from "mongodb";
+
 import { validateEmail } from "../../../helpers/utils";
-const handler = (req, res) => {
+const handler = async (req, res) => {
     const { id } = req.query;
+    const client = await MongoClient.connect(
+        "mongodb+srv://nextjs:nextjsevents@cluster0.1l9ao.mongodb.net/events?retryWrites=true&w=majority"
+    );
+    const db = client.db();
     if (req.method === "GET") {
         return res.status(200).json({
             status: "success",
@@ -15,8 +21,13 @@ const handler = (req, res) => {
                 message: "Invalid inputs",
             });
         }
-        return res.status(200).json({
+        const result = await db
+            .collection("comments")
+            .insertOne({ name, email, text, eventId: id });
+        client.close();
+        res.status(200).json({
             status: "success",
+            comment: result,
         });
     }
 };
