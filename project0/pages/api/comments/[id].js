@@ -8,8 +8,15 @@ const handler = async (req, res) => {
     );
     const db = client.db();
     if (req.method === "GET") {
+        const result = await db
+            .collection("comments")
+            .find({ eventId: id })
+            .sort({ _id: -1 })
+            .toArray();
+
         return res.status(200).json({
             status: "success",
+            comments: result,
         });
     }
 
