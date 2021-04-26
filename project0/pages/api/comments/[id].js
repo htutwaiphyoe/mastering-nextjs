@@ -1,23 +1,25 @@
-import { MongoClient } from "mongodb";
-
+import { connectDatabase, insertDocument, getAllDocuments } from "../../../helpers/dbUtils";
 import { validateEmail } from "../../../helpers/utils";
 const handler = async (req, res) => {
     const { id } = req.query;
-    const client = await MongoClient.connect(
-        "mongodb+srv://nextjs:nextjsevents@cluster0.1l9ao.mongodb.net/events?retryWrites=true&w=majority"
-    );
-    const db = client.db();
-    if (req.method === "GET") {
-        const result = await db
-            .collection("comments")
-            .find({ eventId: id })
-            .sort({ _id: -1 })
-            .toArray();
+    let client;
+    try {
+        client = await connectDatabase();
+    } catch (err) {
+        return res.status(500).json({ status: "fail", message: "Database connection failed" });
+    }
 
-        return res.status(200).json({
-            status: "success",
-            comments: result,
-        });
+    if (req.method === "GET") {
+        try {
+            const result = await getAllDocuments(client, "comments", { eventId: id }, { _id: -1 });
+            client.close();
+            return res.status(200).json({
+                status: "success",
+                comments: result,
+            });
+        } catch (err) {
+            return res.status(500).json({ status: "fail", message: "Fetching comments failed" });
+        }
     }
 
     if (req.method === "POST") {
@@ -28,14 +30,22 @@ const handler = async (req, res) => {
                 message: "Invalid inputs",
             });
         }
-        const result = await db
-            .collection("comments")
-            .insertOne({ name, email, text, eventId: id });
-        client.close();
-        res.status(200).json({
-            status: "success",
-            comment: result,
-        });
+        try {
+            const result = await insertDocument(client, "comments", {
+                name,
+                email,
+                text,
+                eventId: id,
+            });
+
+            client.close();
+            return res.status(200).json({
+                status: "success",
+                comment: result,
+            });
+        } catch (err) {
+            return res.status(500).json({ status: "fail", message: "Inserting comment failed" });
+        }
     }
 };
 

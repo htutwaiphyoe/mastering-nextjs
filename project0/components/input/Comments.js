@@ -14,7 +14,7 @@ function Comments(props) {
         setShowComments((prevStatus) => !prevStatus);
         if (!showComments) {
             const response = await (await fetch("/api/comments/" + eventId)).json();
-            setComments(response.comments);
+            setComments(response.comments ? response.comments : []);
         }
     }
 

@@ -8,5 +8,12 @@ export const connectDatabase = async () => {
 
 export const insertDocument = async (client, collection, document) => {
     const db = client.db();
-    await db.collection(collection).insertOne(document);
+    const result = await db.collection(collection).insertOne(document);
+    return result;
+};
+
+export const getAllDocuments = async (client, collection, filter, sort) => {
+    const db = client.db();
+    const documents = await db.collection(collection).find(filter).sort(sort).toArray();
+    return documents;
 };
