@@ -14,7 +14,7 @@ function Hero() {
                 />
             </figure>
             <h1>Hi, I'm HWP</h1>
-            <p>I write about web development - especially for JavaScript and MERN Stack</p>
+            <p>I write aritcles about web development - especially for JavaScript and MERN Stack</p>
         </section>
     );
 }
