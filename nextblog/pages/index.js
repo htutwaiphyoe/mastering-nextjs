@@ -1,5 +1,14 @@
+import { Fragment } from "react";
+
+import Hero from "../components/home/Hero";
+import FeaturedPosts from "../components/home/FeaturedPosts";
 function Home() {
-    return <h1>Home</h1>;
+    return (
+        <Fragment>
+            <Hero />
+            <FeaturedPosts />
+        </Fragment>
+    );
 }
 
 export default Home;
