@@ -1,41 +1,16 @@
+import { getAllBlogs } from "../../utils/blogUtils";
 import AllBlogs from "../../components/blogs/AllBlogs";
+function AllBlogsPage(props) {
+    return <AllBlogs blogs={props.allBlogs} />;
+}
 
-const DUMMY_BLOGS = [
-    {
-        title: "Getting started with NextJS",
-        slug: "getting-started-with-nextjs",
-        excerpt:
-            "Next.js gives you the best developer experience with all the features you need for production ",
-        date: "2021-10-3",
-        image: "cover.png",
-    },
-    {
-        title: "Getting started with NextJS",
-        slug: "getting-started-with-nextjs",
-        excerpt:
-            "Next.js gives you the best developer experience with all the features you need for production",
-        date: "2021-10-3",
-        image: "cover.png",
-    },
-    {
-        title: "Getting started with NextJS",
-        slug: "getting-started-with-nextjs",
-        excerpt:
-            "Next.js gives you the best developer experience with all the features you need for production",
-        date: "2021-10-3",
-        image: "cover.png",
-    },
-    {
-        title: "Getting started with NextJS",
-        slug: "getting-started-with-nextjs",
-        excerpt:
-            "Next.js gives you the best developer experience with all the features you need for production",
-        date: "2021-10-3",
-        image: "cover.png",
-    },
-];
-function AllBlogsPage() {
-    return <AllBlogs blogs={DUMMY_BLOGS} />;
+export async function getStaticProps(context) {
+    const allBlogs = getAllBlogs();
+    return {
+        props: {
+            allBlogs,
+        },
+    };
 }
 
 export default AllBlogsPage;
