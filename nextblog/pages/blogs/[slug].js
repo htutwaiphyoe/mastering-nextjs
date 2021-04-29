@@ -1,9 +1,19 @@
-import { getFileData, getAllFiles } from "../../utils/blogUtils";
+import { Fragment } from "react";
+import Head from "next/head";
 
+import { getFileData, getAllFiles } from "../../utils/blogUtils";
 import BlogContent from "../../components/blogs/blogDetail/BlogContent";
 
 function BlogDetail(props) {
-    return <BlogContent blog={props.blog} />;
+    return (
+        <Fragment>
+            <Head>
+                <meta name="description" content={props.blog.excerpt} />
+                <title>{props.blog.title}</title>
+            </Head>
+            <BlogContent blog={props.blog} />
+        </Fragment>
+    );
 }
 export async function getStaticProps(context) {
     const { params } = context;
