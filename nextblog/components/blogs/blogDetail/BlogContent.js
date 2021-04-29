@@ -39,7 +39,6 @@ function BlogContent(props) {
             return <p>{p.children}</p>;
         },
         // code(code) {
-        //     console.log(code);
         //     const { language, value } = code;
         //     return <SyntaxHighlighter language={language} children={value} style={dark} />;
         // },

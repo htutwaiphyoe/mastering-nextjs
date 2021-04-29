@@ -55,7 +55,6 @@ function ContactForm(props) {
                 message: "Your message has been sent!.",
             });
         } catch (err) {
-            console.log(err);
             setNotificationStatus({
                 status: "error",
                 title: "Error",

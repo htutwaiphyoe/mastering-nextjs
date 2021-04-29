@@ -12,7 +12,7 @@ async function handler(req, res) {
         let client;
         try {
             client = await MongoClient.connect(
-                "mongodb+srv://nextblogs:nextblogs@cluster0.1l9ao.mongodb.net/blogs?retryWrites=true&w=majority"
+                `mongodb+srv://${process.env.dbUser}:${process.env.dbPass}@${process.env.dbCluster}.1l9ao.mongodb.net/${process.env.dbName}?retryWrites=true&w=majority`
             );
         } catch (e) {
             return res.status(500).json({
