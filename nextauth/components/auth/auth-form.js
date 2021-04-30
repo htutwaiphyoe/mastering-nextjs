@@ -42,7 +42,7 @@ function AuthForm() {
         }
         setEmail("");
         setPassword("");
-        console.log(response);
+       
     }
 
     return (

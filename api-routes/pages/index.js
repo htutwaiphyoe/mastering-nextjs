@@ -15,7 +15,7 @@ const Home = () => {
                 headers: { "Content-Type": "application/json" },
             })
         ).json();
-        console.log(data);
+     
     };
 
     return (
