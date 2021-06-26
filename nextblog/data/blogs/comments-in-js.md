@@ -1,9 +1,9 @@
 ---
 title: "JavaScript သိုင်းကျမ်း အပိုင်း (၁) - Comments"
-date: "2021-6-26"
+date: "2021-06-26"
 image: "mastering-js-thumb.png"
 excerpt: "JavaScript မှာရှိတဲ့ comment တွေအကြောင်းနဲ့ သူတို့ရဲ့ usecases"
-isFeatured: false
+isFeatured: true
 ---
 
 JavaScript ရဲ့ comment တွေအကြောင်းမပြောခင် Comment ဆိုတာဘာလဲ၊ ဘာကြောင့်သုံးရတာလဲ ဆိုတာ အရင်ပြောရအောင်။
