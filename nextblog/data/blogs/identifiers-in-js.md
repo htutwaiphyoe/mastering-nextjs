@@ -17,7 +17,8 @@ identifier တစ်ခုသတ်မှတ်ပေးတဲ့အခါ မ�
 -   နောက်က character တွေကတော့ letters, underscore, number နဲ့ dollar sign တွေထဲက ကြိုက်တာဖြစ်လို့ရတယ်။
 -   digits (1,2,3,..) တွေ (_), ($) မဟုတ်တဲ့ special characters တွေကို identifier ရဲ့ အစစာလုံးအဖြစ် ခွင့်မပြုထားဘူး။
 -   identifier မှာ space တွေမပါရဘူး။
--   နောက်ဆုံးက identifer တွေဟာ case-sensitive ဖြစ်တယ်။
+-   identifer တွေဟာ case-sensitive ဖြစ်တယ်။
+-   နောက်ဆုံးက identifier တွေဟာ language ကနေ reserved လုပ်ထားတဲ့ keyword နာမည်တွေနဲ့ မတူရဘူး။
 
 ```js
 // valid identifers
@@ -36,6 +37,9 @@ var my name;
 // age & Age are different identifers
 var age;
 var Age;
+
+// error because while is keyward for while loop
+var while;
 ```
 အပေါ်က အချက်တွေဟာ rules တွေဖြစ်တဲ့အတွက် မဖြစ်မနေကို လိုက်နာရပါမယ်။ မဟုတ်ရင် error ပြတဲ့အတွက် program ကို run လို့ရမှာ မဟုတ်ပါဘူး။
 
