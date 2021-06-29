@@ -1,8 +1,8 @@
 ---
-title: "JavaScript သိုင်းကျမ်း အပိုင်း (၁) - Identifiers and naming standard"
+title: "JavaScript သိုင်းကျမ်း အပိုင်း (၂) - Identifiers"
 date: "2021-06-29"
 image: "mastering-js-thumb.png"
-excerpt: "JavaScript မှာရှိတဲ့ identifiers တွေနဲ့ naming rules, convention တွေအကြောင်း"
+excerpt: "JavaScript မှာရှိတဲ့ identifiers တွေနဲ့ သူတို့ရဲ့ use cases"
 isFeatured: true
 ---
 # Identifier
