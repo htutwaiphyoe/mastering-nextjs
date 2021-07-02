@@ -11,9 +11,9 @@ function Home(props) {
             <Head>
                 <meta
                     name="description"
-                    content="I wrote ariticles for computer science and web development especially JavaScript and its frameworks MERN Stack."
+                    content="Blogs by HWP. Ariticles for computer science and web development especially JavaScript and its frameworks MERN Stack."
                 />
-                <title>HWP's Blog</title>
+                <title>Blogs By HWP</title>
             </Head>
             <Hero />
             <FeaturedBlogs blogs={props.featuredBlogs} />
