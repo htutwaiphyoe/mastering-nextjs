@@ -1,6 +1,6 @@
 ---
 title: "JavaScript သိုင်းကျမ်း အပိုင်း (၃) - Optional semicolons"
-date: "2021-07-3"
+date: "2021-07-03"
 image: "mastering-js-thumb.png"
 excerpt: "JavaScript မှာရှိတဲ့ semicolon နဲ့ သူရဲ့ ထူးခြားမှု"
 isFeatured: true
