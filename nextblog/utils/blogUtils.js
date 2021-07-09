@@ -24,7 +24,7 @@ export function getFileData(filename) {
 export function getAllBlogs() {
     const fileNames = getAllFiles();
     const blogs = fileNames.map((f) => getFileData(f));
-    const sortedBlogs = blogs.sort((a, b) => (a.date > b.data ? 1 : -1));
+    const sortedBlogs = blogs.sort((a, b) => (a.date > b.date ? -1 : 1));
     return sortedBlogs;
 }
 
