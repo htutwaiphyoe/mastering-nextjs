@@ -52,3 +52,5 @@ var twoSum = function (nums, target) {
 အပေါ်က example ဆိုရင် function တစ်ခုအတွက် အရိုးရှင်းဆုံး docs comment ရေးရမယ့်ပုံစံကိုပြထားတာ။ အဲ့မှာဆို tags တွေသုံးထားတယ်။ @param ဆိုတာက function ကလက်ခံတဲ့ parameter ကိုပြောတာ။ {number[]} nums ဆိုတာက number array တစ်ခု function ကိုပေးရမယ် အဲ့ value အတွက် function မှာပေးထားတဲ့ နာမည်က nums လို့ဆိုလိုတာ။ @return ဆိုတာက function ကနေ value တစ်ခု return ပြန်ပေးရမယ်ကိုဆိုလိုတာ။ နောက်ကဟာက return ပြန်ရမယ့် value ပုံစံကိုသတ်မှတ်ထားတာ။ ဒီမှာဆို number array တစ်ခု return ပြန်ရမယ်ပေါ့။
 
 အသေးစိတ်သိချင်ရင် [https://jsdoc.app/](https://jsdoc.app/) ဆိုပြီး documentation ထုတ်ထားတာရှိတယ်။ ပြီးတော့ standard အတွက် [inline-documentation-standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/) ဒီမှာဝင်ကြည့်လို့ရတယ်။
+
+**_Wanna buy me a coffee ? I'll donate them all._** [get KBZPay QR CODE here](/donation)

@@ -1,0 +1,8 @@
+.Donation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Donation h2 {
+    text-align: center;
+}

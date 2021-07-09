@@ -3,6 +3,7 @@ import Image from "next/image";
 import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
 import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
+import Link from "next/link";
 
 import BlogHeader from "./BlogHeader";
 import classes from "./BlogContent.module.css";
@@ -40,6 +41,9 @@ function BlogContent(props) {
                 );
             }
             return <p>{p.children}</p>;
+        },
+        a(a) {
+            return <Link href={a.href}>{a.children[0]}</Link>;
         },
         // code(code) {
         //     const { language, value } = code;
