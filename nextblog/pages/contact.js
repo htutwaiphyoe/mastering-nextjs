@@ -7,7 +7,7 @@ function Contact() {
         <Fragment>
             <Head>
                 <meta name="description" content="Contact me" />
-                <title>Contact me</title>
+                <title>Contact me | Htut Wai Phyoe</title>
             </Head>
             <ContactForm />
         </Fragment>

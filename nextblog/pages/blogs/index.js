@@ -10,9 +10,9 @@ function AllBlogsPage(props) {
             <Head>
                 <meta
                     name="description"
-                    content="Blogs by HWP. Ariticles for computer science and web development especially JavaScript and its frameworks MERN Stack."
+                    content="Htut Wai Phyoe. Web Developer. Ariticles for computer science and web development especially JavaScript and its frameworks MERN Stack."
                 />
-                <title>All Blogs - Blogs by HWP</title>
+                <title>All Blogs - Htut Wai Phyoe</title>
             </Head>
             <AllBlogs blogs={props.allBlogs} />
         </Fragment>

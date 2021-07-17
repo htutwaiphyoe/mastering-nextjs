@@ -87,4 +87,4 @@ const f = function () {
 
 best practices တွေ အနေနဲ့ကတော့ var အစား let, const တို့ကိုပဲသုံးတာမျိုး၊ function declaration မတိုင်ခင် function ကို invocation မလုပ်တာမျိုး တို့ပါ။
 
-**_Wanna buy me a coffee ? I'll donate them all._** [get KBZPay QR CODE here](/donation)
+**_Wanna make a donation?_** [get KBZPay QR CODE here](/donation)

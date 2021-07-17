@@ -77,4 +77,4 @@ technology သည် အမြဲပြောင်းလဲနေတဲ့အ�
 
 ဒီလောက်ဆိုတော်တော်လေးပြည့်စုံသွားပါပြီ။
 
-**_Wanna buy me a coffee ? I'll donate them all._** [get KBZPay QR CODE here](/donation)
+**_Wanna make a donation?_** [get KBZPay QR CODE here](/donation)

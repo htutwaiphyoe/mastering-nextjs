@@ -9,7 +9,7 @@ function BlogDetail(props) {
         <Fragment>
             <Head>
                 <meta name="description" content={props.blog.excerpt} />
-                <title>{`${props.blog.title} | Blogs by HWP`}</title>
+                <title>{`${props.blog.title} | Htut Wai Phyoe`}</title>
             </Head>
             <BlogContent blog={props.blog} />
         </Fragment>

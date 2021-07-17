@@ -117,4 +117,4 @@ JavaScript မှာတော့ ဒီ case ဟာ invalid ဖြစ်ပါ�
 
 အပေါ်က case တွေဟာ အသုံးများတဲ့ case တွေကိုဖော်ပြထားတာပါ။ langauge standard အရသတ်မှတ်ထားပေမယ့် language တစ်ခုဟာ case တစ်ခုပဲသုံးရမယ်လို့တော့ မရှိပါဘူး။ project ရေးတဲ့ team ရဲ့ standard ပေါ်မူတည်ပြီး အပြောင်းအလဲရှိပါလိမ့်မယ်။
 
-**_Wanna buy me a coffee ? I'll donate them all._** [get KBZPay QR CODE here](/donation)
+**_Wanna make a donation?_** [get KBZPay QR CODE here](/donation)
