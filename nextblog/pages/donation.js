@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import Donation from "../components/Donation/Donation";
 
 const DonationPage = (props) => {
