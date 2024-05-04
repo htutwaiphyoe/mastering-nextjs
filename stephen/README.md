@@ -9,3 +9,5 @@ npm install prisma
 npx prisma init --datasource-provider sqlite
 
 npx prisma migrate dev
+
+server actions => "use server" => run db call in component
