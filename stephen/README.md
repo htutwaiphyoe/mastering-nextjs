@@ -3,3 +3,9 @@
     Build apps using NextJS v14 using App Router, Next Auth, NextUI, and TailwindCSS! Learn the latest version of NextJS!
 
 Course by Stephen Grider
+
+npm install prisma
+
+npx prisma init --datasource-provider sqlite
+
+npx prisma migrate dev
